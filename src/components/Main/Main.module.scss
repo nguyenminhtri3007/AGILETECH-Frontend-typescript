@@ -49,6 +49,7 @@
   gap: 20px;
   justify-content: center;
   margin-bottom: 70px;
+  transition: transform 0.3s ease; 
 }
 .productAll{
   display: flex;
@@ -109,4 +110,10 @@
   height: 28px;
   border-radius: 50%;
   cursor: pointer;
+}
+.productListWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

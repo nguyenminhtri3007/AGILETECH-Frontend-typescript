@@ -3,7 +3,7 @@ import { AppConfig } from "../../common/config/app.config";
 import { ServiceCore } from "../../common/service/service.core";
 import { AllProductModel } from "../models/allProduct.model";
 
-export const  GetAllProduct = async (data : AllProductModel) =>{
+export const  fetchAllProducts = async (data : AllProductModel) =>{
   try {
     const domain = new AppConfig().getDomain();
     const response = await ServiceCore.GET(

@@ -1,9 +1,9 @@
-import *as AllProductService from "../services/allProduct,service";
+import *as AllProductService from "../services/allProduct.service";
 import { AllProductModel } from "../models/allProduct.model";
 
-export const AllProduct = async (data : AllProductModel) =>{
+export const getAllProducts  = async (data : AllProductModel) =>{
   try {
-    const result = await AllProductService.GetAllProduct(data)
+    const result = await AllProductService.fetchAllProducts(data)
     return result;
 
   } catch (error) {

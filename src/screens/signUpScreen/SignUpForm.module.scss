@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.formSection {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  margin: auto;
+}
+
+h4 {
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+
+  label {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+.inputWrapper {
+  position: relative;
+
+  input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+  }
+}
+
+.signUpBtn {
+  width: 100%;
+  padding: 12px;
+  background: #3b82f6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+
+  &:hover {
+    background: #2563eb;
+  }
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #777;
+  font-size: 14px;
+
+  span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+  }
+}
+
+.socialBtns {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+
+  button {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+
+  a {
+    color: #3b82f6;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.imageSection {
+  height: 100vh; 
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+}

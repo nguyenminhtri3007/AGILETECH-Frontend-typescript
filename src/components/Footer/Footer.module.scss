@@ -1,0 +1,28 @@
+.footer{
+  display: flex;
+  background-color: #F7F7F7;
+  padding: 20px 100px 20px 200px;
+}
+.left{
+  width: 25%;
+  
+}
+.right{
+  display: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.section{
+  margin-left: 100px;
+ h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: orange;
+  }
+  p{
+    margin-left: -40px;
+  }
+
+}

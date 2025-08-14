@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import styles from './Main.module.scss'
 import { AllProductModel } from '../../data/models/allProduct.model';
 import *as AllProductService from '../../data/services/allProduct.service'
+import { useNavigate } from 'react-router-dom';
 
 
 const BestSellerScreen = () =>{
@@ -13,6 +14,7 @@ const [loading, setLoading] = useState (false);
 const [startIndex, setStartIndex] = useState (0);
 
 const maxVisible = 4;
+const navigate = useNavigate();
 
 useEffect(() =>{
   const fetchProducts = async () =>{
@@ -58,6 +60,12 @@ const handleNext = () => {
 };
 
 const visibleProducts = filteredProducts.slice(startIndex, startIndex + maxVisible);
+
+const handleProductDetail = (id?:number) => {
+  if(id){
+    navigate(`/product/${id}`);
+  }
+} 
  
  return (
     <div className={styles.container}>
@@ -94,7 +102,12 @@ const visibleProducts = filteredProducts.slice(startIndex, startIndex + maxVisib
         ) : visibleProducts.length > 0 ? (
           visibleProducts.map(product => (
             <div className={styles.productCard} key={product.id}>
-              <img src={product.thumbnail} alt={product.title} />
+              <img 
+              style={{cursor:'pointer'}}
+              onClick={() => handleProductDetail(product.id)}
+              src={product.thumbnail} alt={product.title} />
+
+
               <div className={styles.productInfo}>
                 <span className={styles.category}>{product.category}</span>
                 <h4>{product.title}</h4>

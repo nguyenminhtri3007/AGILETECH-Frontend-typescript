@@ -10,3 +10,12 @@ export const getAllProducts  = async (data : AllProductModel) =>{
     throw error
   }
 }
+
+export const GetProductById = async (id: number,data: AllProductModel) =>{
+  try {
+    const result = await AllProductService.fetchProductById(id,data)
+    return result;
+  } catch (error) {
+    throw error
+  }
+}

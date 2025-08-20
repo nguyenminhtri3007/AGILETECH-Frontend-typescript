@@ -7,6 +7,7 @@ import HomePage from './screens/homepageScreen/Homepage';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetailScreen from './screens/detailProductScreen/DetailProductScreen';
 import ChatApp from './screens/ChatApp/ChatApp';
+import { CartProvider } from './context/CartContext';
 
 
 const root = ReactDOM.createRoot(
@@ -14,14 +15,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-  {/* <BrowserRouter>
+  <BrowserRouter>
+  <CartProvider>
   <Routes>
     <Route path='/' element = {<SignUpForm/>}/>
     <Route path='homepage' element = {<HomePage/>}/>
     <Route path="/product/:id" element = {<ProductDetailScreen/>}/>
   </Routes>
-  </BrowserRouter> */}
-  <ChatApp/>
+  </CartProvider>
+  </BrowserRouter>
+  {/* <ChatApp/> */}
   </React.StrictMode>
 );
 

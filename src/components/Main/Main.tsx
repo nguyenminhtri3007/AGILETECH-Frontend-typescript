@@ -4,9 +4,11 @@ import styles from './Main.module.scss'
 import { AllProductModel } from '../../data/models/allProduct.model';
 import *as AllProductService from '../../data/services/allProduct.service'
 import { useNavigate } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 
 const BestSellerScreen = () =>{
+  const { dispatch } = useCart();
 
 const [activeTab,setActiveTab] = useState <string> ("");
 const [products,setProducts] = useState <AllProductModel[]>([]);
@@ -114,7 +116,12 @@ const handleProductDetail = (id?:number) => {
                 <div className={styles.stars}>{renderStars(product.rating)}</div>
                 <div className={styles.bottom}>
                   <span className={styles.price}>${product.price}</span>
-                  <button className={styles.addCard}>+</button>
+                    <button
+                    className={styles.addCard}
+                    onClick={() => dispatch({ type: "ADD_ITEM", payload: product })}
+                >
+                  +
+                </button>
                 </div>
               </div>
             </div>

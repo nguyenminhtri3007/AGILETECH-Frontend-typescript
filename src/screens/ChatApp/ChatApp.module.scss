@@ -1,0 +1,13 @@
+.appContainer{
+ max-width: 400px;
+   margin: "20px auto";
+   border: 1px solid #ccc;
+   padding: 10px;
+}
+.appContent{
+  height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 10px ;
+}

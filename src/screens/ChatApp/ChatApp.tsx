@@ -35,7 +35,7 @@ return (
        value={input}
        placeholder="nhận tin nhắn"
        onChange={(e) =>setInput(e.target.value)}
-       onKeyDown={(e) => e.key === "enter" && SendMessage}
+       onKeyDown={(e) => e.key === "Enter" && SendMessage()}
        />
 
        <button onClick={SendMessage}>Gửi tin nhắn</button>

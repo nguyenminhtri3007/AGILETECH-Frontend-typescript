@@ -11,7 +11,7 @@ export const getAllProducts  = async (data : AllProductModel) =>{
   }
 }
 
-export const GetProductById = async (id: number,data: AllProductModel) =>{
+export const getProductById = async (id: number,data: AllProductModel) =>{
   try {
     const result = await AllProductService.fetchProductById(id,data)
     return result;

@@ -28,6 +28,9 @@ const handleSubmit = async (e: React.FormEvent) => {
       if(res.image){
         appconfig.setImage(res.image)
       }
+      if(res.id){
+        appconfig.setUserId(res.id)
+      }
       navigate("/homepage");
     } catch (e) {
       console.error("Đăng nhập thất bại:", e);
